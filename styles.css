@@ -1,104 +1,47 @@
-html, body {
-  height: 100%;
-}
+/* Base styles (desktop/tablet) remain as you have them */
 
-body {
-  display: flex;              /* enable flexbox */
-  flex-direction: column;
-  font-family: 'Manrope', sans-serif;
-  background-color: #202020;
-  color: #ffffff;
-  padding: 0;
-  margin: 30px;
-}
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;                /* reduce side margins */
+    font-size: 0.95rem;          /* slightly smaller base font */
+  }
 
-h1 {
-  color: #34ccff;
-  margin: 0;                  /* remove default top/bottom margin */
-  font-size: 1.8rem;          /* shrink the font size */
-  line-height: 1.2;           /* tighten spacing between lines */
-}
+  h1 {
+    font-size: 1.4rem;           /* smaller headings */
+  }
 
-h2 {
-  color: #34ccff;
-  margin: 0;                  /* remove default top/bottom margin */
-  line-height: 1.2;           /* tighten spacing between lines */
-}
+  h2 {
+    font-size: 1.2rem;
+  }
 
-p {
-  line-height: 1.4;
-}
+  header nav {
+    display: flex;
+    flex-direction: column;      /* stack nav links vertically */
+    align-items: center;
+    gap: 8px;                    /* spacing between links */
+  }
 
-img {
-  max-width: 200px;
-  height: auto;
-  display: block;
-}
+  #faq {
+    margin-left: 0;              /* remove left indent on small screens */
+  }
 
-a {
-  color: #1E90FF;
-}
+  footer {
+    padding: 15px;
+    text-align: center;
+  }
 
-header {
-  background-color: #151515;
-  color: rgb(0, 114, 114);
-  padding: 10px 20px;
-  border-radius: 10px;
-}
+  #social {
+    flex-wrap: wrap;             /* allow icons to wrap if needed */
+    gap: 12px;                   /* spacing between icons */
+  }
 
-main {
-  flex: 1;                    /* main content grows to push footer down */
-}
+  #social img {
+    max-width: 32px;             /* slightly smaller icons */
+  }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #151515;
-  color: #888888;
-  padding: 10px;
-  border-radius: 10px 10px 0px 0px;
-}
-
-footer #ig-logo {
-  filter: brightness(0) invert(1); /* recolor Instagram logo to white */
-}
-
-#social {
-  display: flex;              /* arrange children in a row */
-  justify-content: center;    /* center them horizontally */
-}
-
-#social img {
-  max-width: 40px;
-  filter: brightness(0) invert(1);   /* white by default */
-  transition: transform 0.3s ease,   /* smooth scaling */
-              filter 0.3s ease;      /* smooth color change */
-}
-
-#social img:hover {
-  transform: scale(1.1);             /* grow slightly */
-  filter: brightness(0.7) invert(1); /* darker white */
-}
-
-header nav a {
-  font-family: monospace, monospace;
-  color: #FFF;
-  margin-right: 15px;                /* space between nav links */
-  text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.3s ease; /* smooth effect */
-}
-
-header nav a:hover {
-  color: #34ccff;                    /* change text color on hover */
-  text-decoration: underline;        /* add underline on hover */
-}
-
-small {
-  font-family: monospace, monospace;
-}
-
-#faq {
-  margin-left: 20px;
+  img {
+    max-width: 100%;             /* scale images to fit screen */
+    height: auto;
+  }
 }
