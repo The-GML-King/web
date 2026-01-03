@@ -103,9 +103,7 @@ small {
   margin-left: 20px;
 }
 
-/* Base styles (desktop/tablet) remain as you have them */
-
-/* Mobile adjustments */
+/* ---------------- MEDIA QUERIES ---------------- */
 @media (max-width: 600px) {
   body {
     margin: 10px;                /* reduce side margins */
@@ -128,7 +126,7 @@ small {
   }
 
   #faq {
-    margin-left: 20px;              /* remove left indent on small screens */
+    margin-left: 0;              /* remove left indent on small screens */
   }
 
   footer {
