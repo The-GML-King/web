@@ -106,7 +106,7 @@ small {
 /* ---------------- MEDIA QUERIES ---------------- */
 @media (max-width: 600px) {
   body {
-    margin: 10px;                /* reduce side margins */
+    margin: 30px;                /* reduce side margins */
     font-size: 0.95rem;          /* slightly smaller base font */
   }
 
@@ -120,9 +120,9 @@ small {
 
   header nav {
     display: flex;
-    flex-direction: column;      /* stack nav links vertically */
+    flex-direction: row;      /* stack nav links vertically */
     align-items: center;
-    gap: 8px;                    /* spacing between links */
+    gap: 12px;                    /* spacing between links */
   }
 
   #faq {
